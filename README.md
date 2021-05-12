@@ -25,11 +25,12 @@
 - 입력 취소 불가능
 - 입력 순서는 상관 없음
 
+-------------
 ### 합 예시
-![combin_Ation playimg5](https://user-images.githubusercontent.com/64065652/117988901-cc4c5700-b376-11eb-94ff-56316b3830cb.jpg){: width="100" height="100"}
-
+![combin_Ation playimg5](https://user-images.githubusercontent.com/64065652/117989765-8b087700-b377-11eb-9882-19f5c7272730.jpg)
+------------
 ### 실행 화면 
-![combin_Ation playimg3](https://user-images.githubusercontent.com/64065652/117988889-c9516680-b376-11eb-9ef4-b0d1dc623e59.jpg){: width="100" height="100"}
-![combin_Ation playimg2](https://user-images.githubusercontent.com/64065652/117988904-cd7d8400-b376-11eb-822d-9e2967aef637.jpg){: width="100" height="100"}
-![combin_Ation playimg4](https://user-images.githubusercontent.com/64065652/117988910-ceaeb100-b376-11eb-92f4-04a7d918c39b.jpg){: width="100" height="100"}
+![combin_Ation playimg3](https://user-images.githubusercontent.com/64065652/117989775-8c39a400-b377-11eb-835c-22dccb251aab.jpg)
+![combin_Ation playimg2](https://user-images.githubusercontent.com/64065652/117989786-8d6ad100-b377-11eb-9fb3-9cfe3a076ae5.jpg)
+![combin_Ation playimg4](https://user-images.githubusercontent.com/64065652/117989798-8e9bfe00-b377-11eb-9319-21dec5441bd1.jpg)
 
