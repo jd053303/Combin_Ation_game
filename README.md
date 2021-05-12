@@ -25,6 +25,11 @@
 - 입력 취소 불가능
 - 입력 순서는 상관 없음
 
-![combin_Ation playimg3](https://user-images.githubusercontent.com/64065652/117988267-36b0c780-b376-11eb-94f3-173b70881aa2.jpg)
-![combin_Ation playimg2](https://user-images.githubusercontent.com/64065652/117988272-387a8b00-b376-11eb-8064-1b96744acf72.jpg)
-![combin_Ation playimg4](https://user-images.githubusercontent.com/64065652/117988278-39abb800-b376-11eb-8af0-a9740f93b87c.jpg)
+### 합 예시
+![combin_Ation playimg5](https://user-images.githubusercontent.com/64065652/117988901-cc4c5700-b376-11eb-94ff-56316b3830cb.jpg){: width="100" height="100"}
+
+### 실행 화면 
+![combin_Ation playimg3](https://user-images.githubusercontent.com/64065652/117988889-c9516680-b376-11eb-9ef4-b0d1dc623e59.jpg){: width="100" height="100"}
+![combin_Ation playimg2](https://user-images.githubusercontent.com/64065652/117988904-cd7d8400-b376-11eb-822d-9e2967aef637.jpg){: width="100" height="100"}
+![combin_Ation playimg4](https://user-images.githubusercontent.com/64065652/117988910-ceaeb100-b376-11eb-92f4-04a7d918c39b.jpg){: width="100" height="100"}
+
