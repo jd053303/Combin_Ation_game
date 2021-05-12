@@ -44,7 +44,7 @@ ab(int a, int b, int c, int aa){
 	return aa;
 }
 
-//////타일 출력 
+//////그림 출력 
 tile(int *a, int f){
 	int i;
 	for(i=0; i<2; i++){
@@ -81,7 +81,7 @@ spch(int *a, int *b, int f){
 	printf("\n");
 }
 
-///////줄 맞춰 타일 넣기 2
+///////줄 맞춰 그림 넣기 2
 tile2(int *a, int f){
 	int i;
 	for(i=0; i<2; i++){
@@ -114,7 +114,7 @@ maingame(int ht, int sco, int best, int t, int btt){
 	
 	system("cls");
 	cursor(1);
-	//타일 랜덤 입력 
+	//그림 랜덤 입력 
 	do{
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 		gotoxy(33,3);
@@ -217,7 +217,7 @@ maingame(int ht, int sco, int best, int t, int btt){
 	gotoxy(22,30);
 	printf("개수 : %d\n\n", aa);
 	
-	//타일 출력 
+	//그림 출력 
 		gotoxy(7,10);
 		tile(totclr, f);
 		spch(totclr, ch, f);
@@ -231,7 +231,7 @@ maingame(int ht, int sco, int best, int t, int btt){
 		spch(totclr, ch, f);
 		f=tile2(totclr, f);
 		
-	//타일 위치 번호 	
+	//그림 위치 번호 	
 	gotoxy(10,10); SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), backclr[1]+7); printf("１");
 	gotoxy(21,10); SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), backclr[2]+7); printf("２");
 	gotoxy(32,10); SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), backclr[3]+7); printf("３");
@@ -519,7 +519,7 @@ heart2(int hh){
 }
 
 ////////////////////////////로비 화면////////////////////////////////// 
-//로비 상단 디자인 타일 
+//로비 상단 디자인 그림 
 maintile(){
 	int i, y=3;
 	for(i=0; i<2; i++){
@@ -683,22 +683,22 @@ rule1(int best, int btt, int ht, int score, int time){
 		gotoxy(3,4);
 		printf("1. 바탕색, 도형, 도형의 색이 각각 모두 다르거나 모두 같은");
 		gotoxy(3,5);
-		printf("   3개의 타일을 조합 해야 한다. (다음 장 예시 참조)");
+		printf("   3개의 그림을 조합 해야 한다. ( = 합) / 다음 장 예시 참조");
 		gotoxy(3,7);
-		printf("2. 조합이 더 이상 없다면 'X' 키를 눌러 다음 라운드로 넘어간다. ");
+		printf("2. 조합이 더 이상 없다면 'X' 키를 눌러 다음 라운드로 넘어간다. ( = 결)");
 		gotoxy(3,9);
-		printf("3. 이미 입력 된 타일도 다음 조합에 다시 입력이 가능하다.(=중복 선택 가능)");
+		printf("3. 이미 입력 된 그림도 다음 조합에 다시 입력이 가능하다. ( = 중복 선택 가능)");
 		gotoxy(3,11);
-		printf("4. 총 3번 오답 시 게임이 종료된다.");
+		printf("4. 오답은 표시가 된다.");
 		gotoxy(3,13);
-		printf("5. 오답은 표시가 된다.");
+		printf("5. 총 3번 오답 시 게임이 종료된다.");
 
 		gotoxy(8,19);
 		printf("────────  점 수 ────────");
 		gotoxy(13,22);
-		printf(" 조 합 :  +1 점");
+		printf("  합 :  +1 점");
 		gotoxy(13,24);
-		printf("   X   :  +3 점");
+		printf("  결 :  +3 점");
 		gotoxy(46,19);
 		printf("────────  입 력 ────────");
 		gotoxy(51,22);
@@ -706,10 +706,10 @@ rule1(int best, int btt, int ht, int score, int time){
 		gotoxy(51,24);
 		printf(" 영 문 :   X  ");
 		
-		gotoxy(38,11);
+		gotoxy(29,11);
 		printf("(LIFE :   X 3)");
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),12);
-		gotoxy(46,11);
+		gotoxy(37,11);
 		printf("♥");
 		
 		gotoxy(39,32);
@@ -742,7 +742,7 @@ rule2(int best, int btt, int ht, int score, int time){
 	
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
 	gotoxy(23,3);
-	printf("──────────  조합 예시 ──────────");
+	printf("──────────  합 예시 ──────────");
 	
 	for(i=0; i<3; i++){gotoxy(11,7+i); tuto(224, 128, 240);}
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
@@ -837,7 +837,7 @@ rule2(int best, int btt, int ht, int score, int time){
 		}
 	}
 }
-// 2페이지// 예시 타일 출력코드 
+// 2페이지// 예시 그림 출력코드 
 tuto(int a, int b, int c){
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),a);
 		printf("      ");
@@ -859,7 +859,7 @@ rule3(int best, int btt, int ht, int score, int time){
 	
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
 	gotoxy(21,3);
-	printf("──────────  타일 입력 번호 ──────────");
+	printf("──────────  그림 입력 번호 ──────────");
 	for(i=0; i<3; i++){gotoxy(30,8+i); tuto(112,112,112);}
 	for(i=0; i<3; i++){gotoxy(30,12+i); tuto(112,112,112);}
 	for(i=0; i<3; i++){gotoxy(30,16+i); tuto(112,112,112);}	
@@ -880,7 +880,7 @@ rule3(int best, int btt, int ht, int score, int time){
 	gotoxy(24,25);
 	printf("━  입력 취소 불가능.");
 	gotoxy(24,27);
-	printf("━  타일의 왼쪽 위에 표시되어 있음.");
+	printf("━  그림의 왼쪽 위에 표시되어 있음.");
 	
 	gotoxy(39,32);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
