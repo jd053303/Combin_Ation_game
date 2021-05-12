@@ -24,3 +24,7 @@
 ### 입력 시 주의사항
 - 입력 취소 불가능
 - 입력 순서는 상관 없음
+
+![combin_Ation playimg3](https://user-images.githubusercontent.com/64065652/117988267-36b0c780-b376-11eb-94f3-173b70881aa2.jpg)
+![combin_Ation playimg2](https://user-images.githubusercontent.com/64065652/117988272-387a8b00-b376-11eb-8064-1b96744acf72.jpg)
+![combin_Ation playimg4](https://user-images.githubusercontent.com/64065652/117988278-39abb800-b376-11eb-8af0-a9740f93b87c.jpg)
