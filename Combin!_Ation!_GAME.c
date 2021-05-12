@@ -33,7 +33,7 @@ void remove_scrollbar(){
     SetConsoleScreenBufferSize(handle, new_size);
 }
 
-//정답 보기 
+//정답 보기
 ab(int a, int b, int c, int aa){
 	gotoxy(55,22+aa);
 	if(a==b||b==c||c==a) aa--;
@@ -255,7 +255,7 @@ maingame(int ht, int sco, int best, int t, int btt){
 	
 	int x, y;
    //입력란 
-	for(i=0; i<10000000000; i++){
+	while (1){
 			x=50;
 			y=12;
 			gotoxy(x, y);
@@ -273,8 +273,10 @@ maingame(int ht, int sco, int best, int t, int btt){
 			
 			do{			
 				q=getch()-'0';
-				if(q==72) printf("   x   "); break;
-				
+				if(q==72) {
+					printf("   x   "); 
+					break;
+				}
 			}while(9<q||q<1);
 				if(q!=72) {
 					qq[over]=q;
@@ -601,7 +603,7 @@ firstscreen(int best, int btt, int ht, int score, int time){
 	gotoxy(37,24);
 	printf("EXIT");
 	gotoxy(50,32);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),8);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),7);
 	printf("이동 : ↑ ↓   선택 : ENTER");
 	
 	//하단 화면// 화살표 이동 
@@ -636,7 +638,7 @@ firstscreen(int best, int btt, int ht, int score, int time){
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
 			printf("감사합니다 :)");
 			gotoxy(28,31);
-			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),8);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),7);
 			printf("ㅡ아무키나 눌러주세요ㅡ");
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),0);
 			exit(0);
@@ -680,46 +682,51 @@ rule1(int best, int btt, int ht, int score, int time){
 	system("cls"); 
 	int i, tt, key;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
-		gotoxy(3,4);
-		printf("1. 바탕색, 도형, 도형의 색이 각각 모두 다르거나 모두 같은");
-		gotoxy(3,5);
-		printf("   3개의 그림을 조합 해야 한다. ( = 합) / 다음 장 예시 참조");
-		gotoxy(3,7);
-		printf("2. 조합이 더 이상 없다면 'X' 키를 눌러 다음 라운드로 넘어간다. ( = 결)");
-		gotoxy(3,9);
-		printf("3. 이미 입력 된 그림도 다음 조합에 다시 입력이 가능하다. ( = 중복 선택 가능)");
-		gotoxy(3,11);
-		printf("4. 오답은 표시가 된다.");
-		gotoxy(3,13);
-		printf("5. 총 3번 오답 시 게임이 종료된다.");
-
-		gotoxy(8,19);
-		printf("────────  점 수 ────────");
-		gotoxy(13,22);
-		printf("  합 :  +1 점");
-		gotoxy(13,24);
-		printf("  결 :  +3 점");
-		gotoxy(46,19);
-		printf("────────  입 력 ────────");
-		gotoxy(51,22);
-		printf(" 숫 자 : 1 ~ 9");
-		gotoxy(51,24);
-		printf(" 영 문 :   X  ");
-		
-		gotoxy(29,11);
-		printf("(LIFE :   X 3)");
+		gotoxy(25,3);
+		printf("──────────   RULE   ──────────");
+		gotoxy(4,7);
+		printf("- [ 합 ] 바탕색, 도형, 도형의 색이 각각 모두 다르거나 모두 같은");
+		gotoxy(4,8);
+		printf("         3개의 그림을 조합 해야 합니다.");
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),6);
+		gotoxy(47,8);
+		printf("※다음 장 예시 참조※");
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+		gotoxy(4,10);
+		printf("- [ 결 ] 합이 더 이상 없다면 'X' 키를 눌러 다음 라운드로 넘어갑니다.");
+		gotoxy(4,12);
+		printf("- [ 중복 선택 가능 ] 그림을 중복 선택하여 새로운 합을 만들 수 있습니다. ");
+		gotoxy(4,14);
+		printf("- 오답은 표시가 됩니다.");
+		gotoxy(4,16);
+		printf("- 총 3번 오답 시 게임이 종료됩니다.");
+		gotoxy(41,16);
+		printf("(LIFE :    X 3)");
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),12);
-		gotoxy(37,11);
+		gotoxy(49,16);
 		printf("♥");
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+		gotoxy(8,21);
+		printf("────────  점 수 ────────");
+		gotoxy(13,24);
+		printf("  합 :  + 1 점");
+		gotoxy(13,26);
+		printf("  결 :  + 3 점");
+		gotoxy(46,21);
+		printf("────────  입 력 ────────");
+		gotoxy(49,24);
+		printf(" 합 [숫자] : 1 ~ 9");
+		gotoxy(49,26);
+		printf(" 결 [영문] :   X  ");
 		
 		gotoxy(39,32);
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
 		printf("-１-");
 		gotoxy(72,32);
-		printf("━▶");
+		printf("→");
 				
 		gotoxy(2,1);
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),8);
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),7);
 		printf("MENU : ENTER");
 				
 		while(1){
@@ -741,7 +748,7 @@ rule2(int best, int btt, int ht, int score, int time){
 	system("cls");
 	
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
-	gotoxy(23,3);
+	gotoxy(25,3);
 	printf("──────────  합 예시 ──────────");
 	
 	for(i=0; i<3; i++){gotoxy(11,7+i); tuto(224, 128, 240);}
@@ -814,12 +821,12 @@ rule2(int best, int btt, int ht, int score, int time){
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
 	printf("-２-");
 	gotoxy(72,32);
-	printf("━▶");
+	printf("→");
 	gotoxy(6,32);
-	printf("◀━");
+	printf("←");
 	
 	gotoxy(2,1);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),8);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),7);
 	printf("MENU : ENTER");
 	
 	while(1){
@@ -860,36 +867,42 @@ rule3(int best, int btt, int ht, int score, int time){
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
 	gotoxy(21,3);
 	printf("──────────  그림 입력 번호 ──────────");
-	for(i=0; i<3; i++){gotoxy(30,8+i); tuto(112,112,112);}
-	for(i=0; i<3; i++){gotoxy(30,12+i); tuto(112,112,112);}
-	for(i=0; i<3; i++){gotoxy(30,16+i); tuto(112,112,112);}	
+	for(i=0; i<3; i++){gotoxy(30,7+i); tuto(112,112,112);}
+	for(i=0; i<3; i++){gotoxy(30,11+i); tuto(112,112,112);}
+	for(i=0; i<3; i++){gotoxy(30,15+i); tuto(112,112,112);}	
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),112);
-	gotoxy(32,9); printf("１"); 
-	gotoxy(39,9); printf("２");
-	gotoxy(46,9); printf("３");
-	gotoxy(32,13); printf("４"); 
-	gotoxy(39,13); printf("５");
-	gotoxy(46,13); printf("６");
-	gotoxy(32,17); printf("７"); 
-	gotoxy(39,17); printf("８");
-	gotoxy(46,17); printf("９");
+	gotoxy(32,8); printf("１"); 
+	gotoxy(39,8); printf("２");
+	gotoxy(46,8); printf("３");
+	gotoxy(32,12); printf("４"); 
+	gotoxy(39,12); printf("５");
+	gotoxy(46,12); printf("６");
+	gotoxy(32,16); printf("７"); 
+	gotoxy(39,16); printf("８");
+	gotoxy(46,16); printf("９");
 	
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
-	gotoxy(24,23);
-	printf("━  입력 순서는 상관 없음.");
-	gotoxy(24,25);
-	printf("━  입력 취소 불가능.");
-	gotoxy(24,27);
-	printf("━  그림의 왼쪽 위에 표시되어 있음.");
+	gotoxy(24,20);
+	printf("━  그림의 왼쪽 위에 표시되어 있음");
+	gotoxy(24,22);
+	printf("━  입력 순서는 상관 없음");
+	gotoxy(24,24);
+	printf("━  입력 취소 불가능");
+	gotoxy(10,27);
+	printf("──────────────────────────────────────────────────────────────");
+	gotoxy(9,28);
+	printf("  [실행창 상단 바에서 오른쪽 클릭 > 속성 > 글꼴 > 크기 ] 에서");
+	gotoxy(21,29);
+	printf("   화면 크기를 조절할 수 있습니다.");
 	
 	gotoxy(39,32);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
 	printf("-３-");
-	gotoxy(6,32);
-	printf("◀━");
+	gotoxy(6,32); 
+	printf("←");
 	
 	gotoxy(2,1);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),8);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),7);
 	printf("MENU : ENTER");
 	
 	while(1){
